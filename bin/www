@@ -19,7 +19,6 @@ app.set('port', port);
 console.log("输出cpu",os.cpus().length);
 var numCPUs=os.cpus().length;
 if (cluster.isMaster&&false) {
-  console.log("输出进来了")
   for (var i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
